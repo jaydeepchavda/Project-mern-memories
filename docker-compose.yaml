@@ -15,6 +15,7 @@ services:
       - mongo_data:/data/db
 
   backend:
+    image: jaydipaws/memories-backend:v1
 
     build:
       context: ./server
@@ -31,7 +32,7 @@ services:
       - mongo
 
   frontend:
-
+    image: jaydipaws/memories-frontend:v1
     build:
       context: ./client
 
