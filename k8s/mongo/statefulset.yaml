@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: memories-mongo
+
+spec:
+
+  serviceName: mongo-service
+
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: memories-mongo
+
+  template:
+
+    metadata:
+      labels:
+        app: memories-mongo
+
+    spec:
+
+      containers:
+
+      - name: mongo
+
+        image: mongo:7
+
+        ports:
+
+        - containerPort: 27017

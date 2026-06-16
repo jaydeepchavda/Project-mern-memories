@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: memories-frontend
+
+spec:
+
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: memories-frontend
+
+  template:
+
+    metadata:
+      labels:
+        app: memories-frontend
+
+    spec:
+
+      containers:
+
+      - name: frontend
+
+        image: jaydipaws/memories-frontend:latest
+
+        ports:
+
+        - containerPort: 80

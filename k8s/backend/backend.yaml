@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: memories-backend
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: memories-backend
+
+  template:
+
+    metadata:
+      labels:
+        app: memories-backend
+
+    spec:
+
+      containers:
+      - name: backend
+
+        image: jaydipaws/memories-backend:latest
+        ports:
+        - containerPort: 5000
+
+        env:
+
+        - name: CONNECTION_URL
+          value: mongodb://mongo-service:27017/memories
