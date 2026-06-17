@@ -1,18 +1,92 @@
-# Memories
+# 🚀 Production-Style MERN Deployment on AWS EKS
 
-![Memories](https://i.ibb.co/Z8Y0CJv/Screenshot-2020-10-30-at-11-10-04.png)
+> End-to-end cloud deployment of a containerized MERN application using Kubernetes, Docker, CI, and AWS infrastructure.
 
-## Introduction
-This is a code repository for the corresponding video tutorial - https://youtube.com/playlist?list=PL6QREj8te1P7VSwhrMf3D3Xt4V6_SRkhu.
+---
 
-Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called "Memories" and it is a simple social media app that allows users to post interesting events that happened in their lives.
+## ⚡ Architecture
 
-By the end of this video, you will have a strong understanding of how the MERN Stack works.
+GitHub → GitHub Actions → Docker → Amazon ECR → Amazon EKS → EC2 → Kubernetes → Users
 
-### [🌟 Become a top 1% Next.js 15 developer in only one course](https://jsmastery.pro/next15)
-### [🚀 Land your dream programming job in 6 months](https://jsmastery.pro/masterclass)
+---
 
-Setup:
-- run ```npm i && npm start``` for both client and server side to start the app
-# Project-mern-memories
-Building real time production level momeries project with complete devops tool kits
+## 🏗 Infrastructure Stack
+
+🐳 Docker
+☸️ Kubernetes (EKS)
+☁️ AWS (EKS · ECR · EC2 · IAM · VPC)
+⚙️ GitHub Actions
+🍃 MongoDB
+⚛️ React
+🟢 Node.js
+
+---
+
+## 📦 Kubernetes Resources
+
+✅ Namespace
+✅ Deployment
+✅ StatefulSet
+✅ Services
+✅ Ingress
+✅ Readiness Probe
+✅ Liveness Probe
+
+---
+
+## 🔄 Deployment Workflow
+
+Code Push
+
+↓
+
+CI Pipeline
+
+↓
+
+Docker Image Build
+
+↓
+
+Push to Registry
+
+↓
+
+Deploy to Kubernetes
+
+↓
+
+Application Running
+
+---
+
+## 📈 Production Features
+
+🚀 Multi-Pod Deployment
+🔁 Replica Scaling
+🧠 Service Discovery
+📡 Internal Networking
+🩺 Health Checks
+📦 Containerized Architecture
+
+---
+
+## 🧪 Validation
+
+✔ Frontend Running
+✔ Backend Running
+✔ Mongo Running
+✔ EKS Deployment Verified
+✔ Health Endpoint Tested
+
+---
+
+
+## 🔮 Next Improvements
+
+☁️ Load Balancer
+🌍 Custom Domain
+🔐 HTTPS
+🏗 Terraform
+📊 Monitoring
+🚀 Continuous Deployment
