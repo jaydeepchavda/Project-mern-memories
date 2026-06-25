@@ -3,7 +3,8 @@ kind: StatefulSet
 
 metadata:
   name: memories-mongo
-
+  namespace: memories-prod
+  
 spec:
 
   serviceName: mongo-service

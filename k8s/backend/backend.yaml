@@ -3,6 +3,7 @@ kind: Deployment
 
 metadata:
   name: memories-backend
+  namespace: memories-prod
 
 spec:
   replicas: 2

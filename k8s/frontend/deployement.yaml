@@ -3,6 +3,7 @@ kind: Deployment
 
 metadata:
   name: memories-frontend
+  namespace: memories-prod 
 
 spec:
 

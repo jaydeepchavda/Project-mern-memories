@@ -3,6 +3,7 @@ kind: Service
 
 metadata:
   name: mongo-service
+  namespace: memories-prod
 
 spec:
 

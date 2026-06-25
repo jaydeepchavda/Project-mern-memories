@@ -3,7 +3,8 @@ kind: Service
 
 metadata:
   name: backend-service
-
+  namespace: memories-prod
+  
 spec:
 
   type: ClusterIP
