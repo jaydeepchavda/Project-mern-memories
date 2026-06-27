@@ -3,6 +3,7 @@ kind: Deployment
 
 metadata:
   name: memories-backend
+  namespace: memories-prod
 
 spec:
   replicas: 2
@@ -49,11 +50,25 @@ spec:
 
         env:
 
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: memories-config
+              key: PORT
+
+        - name: NODE_ENV
+          valueFrom:
+            configMapKeyRef:
+              name: memories-config
+              key: NODE_ENV
+
         - name: CONNECTION_URL
-          value: mongodb://mongo-service:27017/memories
+          valueFrom:
+            secretKeyRef:
+              name: memories-secret
+              key: CONNECTION_URL
           
         readinessProbe:
-
           httpGet:
             path: /health
             port: 5000
