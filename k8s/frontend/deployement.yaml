@@ -12,7 +12,8 @@ spec:
   selector:
     matchLabels:
       app: memories-frontend
-
+      imagePullPolicy: Always
+      
   template:
 
     metadata:
